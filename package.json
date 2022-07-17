@@ -50,6 +50,7 @@
   "devDependencies": {
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.6.1",
-    "terser-webpack-plugin": "^5.3.3"
+    "terser-webpack-plugin": "^5.3.3",
+    "webpack": "^5.73.0"
   }
 }
