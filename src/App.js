@@ -8,10 +8,11 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Home from "./pages/Home";
 import Projects from "./pages/projects";
+import Footer from "./components/Footer";
 function App() {
   return (
-    <Router>
-      <div>
+    <>
+      <Router>
         <NavMenu />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,8 +22,9 @@ function App() {
 
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
-    </Router>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
