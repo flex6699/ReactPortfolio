@@ -28,8 +28,6 @@
     "styled-components": "^5.3.5",
     "swiper": "^8.3.1",
     "web-vitals": "^2.1.4",
-    "webpack": "^4.19.1",
-    "webpack-dev-server": "^3.1.9",
     "yarn": "^1.22.19"
   },
   "scripts": {
