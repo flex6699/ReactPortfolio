@@ -6,7 +6,7 @@ import SectionTitle from "./SectionTitle";
 import ContactForm from "./ContactForm";
 
 const ContactSectionStyle = styled.div`
-  padding: 10rem 0;
+  padding-top: 10rem;
   .contactSection_wrapper {
     display: flex;
     gap: 5rem;
@@ -32,9 +32,10 @@ const ContactSectionStyle = styled.div`
     max-width: 500px;
     width: 100%;
   }
-  @media only screen and (max-width: 975px) {
+  @media only screen and (max-width: 983px) {
     .contactSection_wrapper {
       flex-direction: column;
+      word-break: break-all;
     }
     .contactSection_wrapper::after {
       display: none;

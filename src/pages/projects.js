@@ -6,7 +6,7 @@ import ProjectItem from "../components/ProjectItem";
 import ProjectInfo from "../assets/data/projects";
 import { motion } from "framer-motion/dist/framer-motion";
 const ProjectsStyles = styled.div`
-  padding: 10rem;
+  padding-top: 10rem;
   .projects_allItems {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

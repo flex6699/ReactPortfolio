@@ -56,7 +56,6 @@ const ProjectSectionStyle = styled.div`
 export default function ProjectsSection() {
   return (
     <>
-      {" "}
       <ProjectSectionStyle>
         <div className="container">
           <SectionTitle heading="Projects" subheading="some of my works" />
