@@ -155,7 +155,7 @@ export default function HeroSection() {
           </h1>
 
           <div className="hero_img">
-            <img src={HeroImg} alt="" />
+            <img src={HeroImg} alt="img" />
           </div>
 
           <div className="hero_info">
