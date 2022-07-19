@@ -6,6 +6,7 @@ import projects from "../assets/data/projects";
 import ProjectItem from "./ProjectItem";
 import styled from "styled-components";
 import "swiper/swiper-bundle.min.css";
+import Slide from "react-reveal/Slide";
 SwiperCore.use([Navigation]);
 
 const ProjectSectionStyle = styled.div`
@@ -54,37 +55,45 @@ const ProjectSectionStyle = styled.div`
 
 export default function ProjectsSection() {
   return (
-    <ProjectSectionStyle>
-      <div className="container">
-        <SectionTitle heading="Projects" subheading="some of my works" />
-        <div className="projects_allItems">
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1200: {
-                slidesPerView: 3,
-              },
-            }}
-          >
-            {projects.map((projects, index) => {
-              if (index >= 5) return;
-              return (
-                <SwiperSlide key={projects.id}>
-                  <ProjectItem
-                    title={projects.name}
-                    img={projects.img}
-                    desc={projects.desc}
-                  />
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+    <>
+      {" "}
+      <ProjectSectionStyle>
+        <div className="container">
+          <SectionTitle heading="Projects" subheading="some of my works" />
+          <Slide left>
+            <div className="projects_allItems">
+              <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                navigation
+                breakpoints={{
+                  640: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1200: {
+                    slidesPerView: 3,
+                  },
+                }}
+              >
+                {projects.map((projects, index) => {
+                  if (index >= 5) {
+                    return false;
+                  }
+                  return (
+                    <SwiperSlide key={projects.id}>
+                      <ProjectItem
+                        title={projects.name}
+                        img={projects.img}
+                        desc={projects.desc}
+                        link={projects.link}
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+          </Slide>
         </div>
-      </div>
-    </ProjectSectionStyle>
+      </ProjectSectionStyle>
+    </>
   );
 }

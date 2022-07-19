@@ -4,6 +4,7 @@ import PText from "./PText";
 import SectionTitle from "./SectionTitle";
 import AboutImg from "../assets/images/about.jpg";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 const AboutSectionStyle = styled.div`
   padding: 10rem 0;
@@ -72,27 +73,32 @@ const AboutSectionStyle = styled.div`
 
 export default function AboutSection() {
   return (
-    <AboutSectionStyle>
-      <div className="container">
-        <div className="about_Section_left">
-          <SectionTitle
-            subheading="Let me introduce myself"
-            heading="About me"
-          />
-          <PText>
-            I'm a btech student and I would like to be a part of an organization
-            where I could use and enhance my knowledge and talent for the
-            development of both the organization and myself..
-          </PText>
-          <div className="aboutSection_button">
-            <Button btnLink="/projects" btnTxt="Works" />
-            <Button btnLink="/about" btnTxt="Read More" outline />
+    <>
+      {" "}
+      <AboutSectionStyle>
+        <div className="container">
+          <div className="about_Section_left">
+            <SectionTitle
+              subheading="Let me introduce myself"
+              heading="About me"
+            />
+            <PText>
+              I'm a btech student and I would like to be a part of an
+              organization where I could use and enhance my knowledge and talent
+              for the development of both the organization and myself..
+            </PText>
+            <div className="aboutSection_button">
+              <Button btnLink="/projects" btnTxt="Works" />
+              <Button btnLink="/about" btnTxt="Read More" outline />
+            </div>
+          </div>
+          <div className="aboutSection_right">
+            <Fade right>
+              <img src={AboutImg} alt="" />{" "}
+            </Fade>
           </div>
         </div>
-        <div className="aboutSection_right">
-          <img src={AboutImg} alt="" />
-        </div>
-      </div>
-    </AboutSectionStyle>
+      </AboutSectionStyle>
+    </>
   );
 }

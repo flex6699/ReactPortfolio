@@ -2,26 +2,19 @@ import React from "react";
 
 import "./App.css";
 import NavMenu from "./components/NavMenu";
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Home from "./pages/Home";
-import Projects from "./pages/projects";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+
 function App() {
   return (
     <>
       <Router>
         <NavMenu />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-
-          <Route path="/projects" element={<Projects />} />
-
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <ScrollToTop />
+        <AnimatedRoutes />
         <Footer />
       </Router>
     </>

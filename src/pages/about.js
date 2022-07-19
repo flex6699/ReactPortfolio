@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import AboutImg from "../assets/images/about-page-img.png";
 import styled from "styled-components";
 import AboutInfoItem from "../components/AboutInfoItem";
-
+import { motion } from "framer-motion/dist/framer-motion";
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
   .top_section {
@@ -73,49 +73,55 @@ const AboutPageStyles = styled.div`
 
 export default function About() {
   return (
-    <AboutPageStyles>
-      <div className="container">
-        <div className="top_section">
-          <div className="left">
-            <p className="about_subHeading">
-              Hi, I am <span>Aniruddha Bohra</span>
-            </p>
-            <h2 className="about_heading">Btech CSE student</h2>
-            <div className="about_info">
-              <PText>
-                I am from lohaghat, Uttarakhand. A small town known as The
-                Mystique Valley. Since my childhood , i always try to design
-                stuff with my point of view .<br />
-                <br />I began coding in my first year of college. I love it . I
-                find it really interesting and I enjoyed the proccess a lot.
-                <br /> <br />
-              </PText>
+    <motion.div
+      inital={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth }}
+    >
+      <AboutPageStyles>
+        <div className="container">
+          <div className="top_section">
+            <div className="left">
+              <p className="about_subHeading">
+                Hi, I am <span>Aniruddha Bohra</span>
+              </p>
+              <h2 className="about_heading">Btech CSE student</h2>
+              <div className="about_info">
+                <PText>
+                  I am from lohaghat, Uttarakhand. A small town known as The
+                  Mystique Valley. Since my childhood , i always try to design
+                  stuff with my point of view .<br />
+                  <br />I began coding in my first year of college. I love it .
+                  I find it really interesting and I enjoyed the proccess a lot.
+                  <br /> <br />
+                </PText>
+              </div>
+              <Button btnText="Download CV" btnLink="#" />
             </div>
-            <Button btnText="Download CV" btnLink="#" />
+            <div className="right">
+              <img src={AboutImg} alt="about-img" />
+            </div>
           </div>
-          <div className="right">
-            <img src={AboutImg} alt="about-img" />
+          <div className="about_info_items">
+            <div className="about_info_item">
+              <h1 className="about_info_heading">Education</h1>
+              <AboutInfoItem title="School" items={["AVBIL, Haldwani"]} />
+              <AboutInfoItem
+                title="College"
+                items={["Bennett University,Noida"]}
+              />
+            </div>
+            <div className="about_info_item">
+              <h1 className="about_info_heading">My Skills</h1>
+              <AboutInfoItem
+                title="FrontEnd"
+                items={["HTML", "CSS", "React", "JavaScript"]}
+              />
+              <AboutInfoItem title="DataBase" items={["MySql"]} />
+            </div>
           </div>
         </div>
-        <div className="about_info_items">
-          <div className="about_info_item">
-            <h1 className="about_info_heading">Education</h1>
-            <AboutInfoItem title="School" items={["AVBIL, Haldwani"]} />
-            <AboutInfoItem
-              title="College"
-              items={["Bennett University,Noida"]}
-            />
-          </div>
-          <div className="about_info_item">
-            <h1 className="about_info_heading">My Skills</h1>
-            <AboutInfoItem
-              title="FrontEnd"
-              items={["HTML", "CSS", "React", "JavaScript"]}
-            />
-            <AboutInfoItem title="DataBase" items={["MySql"]} />
-          </div>
-        </div>
-      </div>
-    </AboutPageStyles>
+      </AboutPageStyles>
+    </motion.div>
   );
 }

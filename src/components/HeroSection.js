@@ -6,6 +6,7 @@ import PText from "./PText";
 import SocialMediaArrow from "../assets/images/social-media-arrow.svg";
 import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
 import styled from "styled-components";
+import Jello from "react-reveal/Jello";
 
 const HeroStyle = styled.div`
   .hero {
@@ -144,50 +145,62 @@ const HeroStyle = styled.div`
   }
 `;
 
-export default function HeroSection() {
+function HeroSection() {
   return (
-    <HeroStyle>
-      <div className="hero">
-        <div className="container">
-          <h1 className="hero_heading">
-            <span>Hello this is</span>
-            <span className="hero_name">Aniruddha Bohra</span>
-          </h1>
-
-          <div className="hero_img">
-            <img src={HeroImg} alt="img" />
-          </div>
-
-          <div className="hero_info">
-            <PText>Who Is Passionate About Learning New Things.</PText>
-            <Button btnLink="/projects" btnTxt="see my works" />
-          </div>
-          <div className="hero_social">
-            <div className="hero_social_indicator">
-              <p>Follow</p>
-              <img src={SocialMediaArrow} alt="" />
+    <React.Fragment>
+      <HeroStyle>
+        <div className="hero">
+          <div className="container">
+            <Jello>
+              <h1 className="hero_heading">
+                <span>Hello this is</span>
+                <span className="hero_name">Aniruddha Bohra</span>
+              </h1>
+            </Jello>
+            <div className="hero_img">
+              <img src={HeroImg} alt="img" />
             </div>
-            <div className="hero_social_text">
-              <ul>
-                <li>
-                  <a href="#" target="_blank">
-                    FB
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    TW
-                  </a>
-                </li>
-              </ul>
+
+            <div className="hero_info">
+              <PText>Who Is Passionate About Learning New Things.</PText>
+              <Button btnLink="/projects" btnTxt="see my works" />
             </div>
-          </div>
-          <div className="hero_scrollDown">
-            <p>Scroll</p>
-            <img src={ScrollDownArrow} alt=" " />
+            <div className="hero_social">
+              <div className="hero_social_indicator">
+                <p>Follow</p>
+                <img src={SocialMediaArrow} alt="" />
+              </div>
+              <div className="hero_social_text">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/aniruddha.bohra.16/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      FB
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/i/flow/login"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      TW
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="hero_scrollDown">
+              <p>Scroll</p>
+              <img src={ScrollDownArrow} alt=" " />
+            </div>
           </div>
         </div>
-      </div>
-    </HeroStyle>
+      </HeroStyle>
+    </React.Fragment>
   );
 }
+export default HeroSection;

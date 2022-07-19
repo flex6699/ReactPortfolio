@@ -4,6 +4,7 @@ import SectionTitle from "../components/SectionTitle";
 import { MdSearch } from "react-icons/md";
 import ProjectItem from "../components/ProjectItem";
 import ProjectInfo from "../assets/data/projects";
+import { motion } from "framer-motion/dist/framer-motion";
 const ProjectsStyles = styled.div`
   padding: 10rem;
   .projects_allItems {
@@ -67,32 +68,41 @@ export default function Projects() {
   }
 
   return (
-    <ProjectsStyles>
-      <div className="container">
-        <SectionTitle heading="Projects" subheading="some of my recent works" />
-        <div className="projects_searchBar ">
-          <form>
-            <input
-              type="text"
-              value={searchText}
-              onChange={handleChange}
-              placeholder="Project Name"
-            />
-            <MdSearch className="searchIcon"></MdSearch>
-          </form>
-        </div>
-        <div className="projects_allItems">
-          {projectData &&
-            projectData.map((item) => (
-              <ProjectItem
-                key={item.id}
-                title={item.name}
-                desc={item.desc}
-                img={item.img}
+    <motion.div
+      inital={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth }}
+    >
+      <ProjectsStyles>
+        <div className="container">
+          <SectionTitle
+            heading="Projects"
+            subheading="some of my recent works"
+          />
+          <div className="projects_searchBar ">
+            <form>
+              <input
+                type="text"
+                value={searchText}
+                onChange={handleChange}
+                placeholder="Project Name"
               />
-            ))}
+              <MdSearch className="searchIcon"></MdSearch>
+            </form>
+          </div>
+          <div className="projects_allItems">
+            {projectData &&
+              projectData.map((item) => (
+                <ProjectItem
+                  key={item.id}
+                  title={item.name}
+                  desc={item.desc}
+                  img={item.img}
+                />
+              ))}
+          </div>
         </div>
-      </div>
-    </ProjectsStyles>
+      </ProjectsStyles>
+    </motion.div>
   );
 }

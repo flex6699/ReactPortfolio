@@ -34,12 +34,21 @@ const ProjectItemStyle = styled.div`
       height: 350px;
     }
   }
+  .projectButton {
+    display: inline-block;
+    font-size: 1.8rem;
+    text-decoration: underline;
+
+    margin: 2rem 0;
+    color: royalblue;
+  }
 `;
 
 export default function ProjectItem({
   img = projectImg,
   title = "Project Name",
   desc = "lorem epsum",
+  link = "https://google.com",
 }) {
   return (
     <ProjectItemStyle>
@@ -51,6 +60,11 @@ export default function ProjectItem({
           <h3 className="projectItem_title">{title}</h3>
         </Link>
         <p className="projectItem_desc">{desc}</p>
+        {link && (
+          <a className="projectButton" href={link}>
+            Open Project
+          </a>
+        )}
       </div>
     </ProjectItemStyle>
   );
