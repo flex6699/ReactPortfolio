@@ -96,7 +96,7 @@ export default function NavMenu() {
           <MdClose />
         </div>
         <li>
-          <NavLink to="/" onClick={() => SetShowNav(!showNav)}>
+          <NavLink end to="/" onClick={() => SetShowNav(!showNav)}>
             Home
           </NavLink>
         </li>
