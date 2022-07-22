@@ -11,7 +11,7 @@ const projects = [
     name: "Tic-tac-toe",
     desc: "Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.",
     img: tic_tac,
-    path: "https://comfy-semolina-a44f8f.netlify.app",
+    path: "https://resplendent-llama-f6cc51.netlify.app/",
   },
   {
     id: uuidv4(),
