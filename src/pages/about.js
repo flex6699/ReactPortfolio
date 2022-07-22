@@ -1,10 +1,12 @@
 import React from "react";
 import PText from "../components/PText";
-import Button from "../components/Button";
-import AboutImg from "../assets/images/about-page-img.png";
+
+import AboutImg from "../assets/images/aboutme.jpg";
 import styled from "styled-components";
 import AboutInfoItem from "../components/AboutInfoItem";
 import { motion } from "framer-motion/dist/framer-motion";
+import Button1 from "../components/Button1";
+
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
   .top_section {
@@ -96,7 +98,7 @@ export default function About() {
                   <br /> <br />
                 </PText>
               </div>
-              <Button btnText="Download CV" btnLink="#" />
+              <Button1 />
             </div>
             <div className="right">
               <img src={AboutImg} alt="about-img" />

@@ -190,6 +190,15 @@ function HeroSection() {
                       TW
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="https://github.com/flex6699"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GH
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

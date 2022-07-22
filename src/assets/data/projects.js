@@ -1,41 +1,38 @@
 import { v4 as uuidv4 } from "uuid";
 import ProjectImg from "../images/projectImg.png";
-import UTrackerImg from "../images/utracker.jpg";
-import GreenCtgImg from "../images/greenctg.jpg";
-import CoinTrackerImg from "../images/cointracker.jpg";
-import CavinImg from "../images/cavinimg.jpg";
+import tic_tac from "../images/tic-tac-toe.png";
+import Bookmark from "../images/book-mark.png";
+import Weather from "../images/weather.png";
+import matchCard from "../images/match-card.png";
 
 const projects = [
   {
     id: uuidv4(),
-    name: "U Tracker",
-    desc: "An application to track your all data from one place. I developed the website and the mobile app",
-    img: UTrackerImg,
-    link: "http://google.com",
+    name: "Tic-tac-toe",
+    desc: "Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.",
+    img: tic_tac,
+    link: "https://comfy-semolina-a44f8f.netlify.app/",
   },
   {
     id: uuidv4(),
-    name: "Green CTG",
-    desc: "An app to help people to get an overview of how they can make the city beautiful.",
-    img: GreenCtgImg,
+    name: "Bookmark Save",
+    desc: "This Bookmark save app is used for saving your fav website link with the help of local storage.",
+    img: Bookmark,
+    link: "https://comfy-semolina-a44f8f.netlify.app/",
   },
   {
     id: uuidv4(),
-    name: "Coin Tracker",
-    desc: "Using this app you can track any e coin. Also you will get a good advise about investment form the professional",
-    img: CoinTrackerImg,
+    name: "Weather",
+    desc: "It helps to track Weather current conditions in real-time of different locations using api . It sometime not work because i am using free api.",
+    img: Weather,
+    link: "https://keen-flan-6ff872.netlify.app/",
   },
   {
     id: uuidv4(),
     name: "Cavin's Portfolio",
-    desc: "A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.",
-    img: CavinImg,
-  },
-  {
-    id: uuidv4(),
-    name: "Tracking Soft",
-    desc: "A tracking website that will show the performance of the website. Also you will get some useful advice to improve the performance.",
-    img: ProjectImg,
+    desc: "A 2-D matching game designed for kids",
+    img: matchCard,
+    link: "https://neon-faun-f15266.netlify.app/",
   },
 ];
 

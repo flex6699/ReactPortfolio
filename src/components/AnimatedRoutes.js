@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion/dist/framer-motion";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
+
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
