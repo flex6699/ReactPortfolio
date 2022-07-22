@@ -48,8 +48,9 @@ export default function ProjectItem({
   img = projectImg,
   title = "Project Name",
   desc = "lorem epsum",
-  link = "https://google.com",
+  path,
 }) {
+  console.log({ path });
   return (
     <ProjectItemStyle>
       <Link to="/projects" className="projectItem_img">
@@ -60,8 +61,8 @@ export default function ProjectItem({
           <h3 className="projectItem_title">{title}</h3>
         </Link>
         <p className="projectItem_desc">{desc}</p>
-        {link && (
-          <a className="projectButton" href={link}>
+        {path && (
+          <a className="projectButton" href={path}>
             Open Project
           </a>
         )}
