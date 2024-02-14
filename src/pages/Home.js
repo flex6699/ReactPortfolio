@@ -6,6 +6,13 @@ import ContactBanner from "../components/ContactBanner";
 import { motion } from "framer-motion/dist/framer-motion";
 
 export default function Home() {
+   useEffect(() => {
+    // Set the title when the component mounts
+    document.title = "Home";
+
+    // Optionally, you can return a cleanup function to revert the title when the component unmounts
+    
+  }, []);
   return (
     <React.Fragment>
       <motion.div
