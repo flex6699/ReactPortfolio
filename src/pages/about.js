@@ -6,7 +6,7 @@ import styled from "styled-components";
 import AboutInfoItem from "../components/AboutInfoItem";
 import { motion } from "framer-motion/dist/framer-motion";
 import Button1 from "../components/Button1";
-
+import { useEffect } from 'react';
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
   .top_section {
@@ -74,6 +74,13 @@ const AboutPageStyles = styled.div`
 `;
 
 export default function About() {
+   useEffect(() => {
+    // Set the title when the component mounts
+    document.title = "About";
+
+    // Optionally, you can return a cleanup function to revert the title when the component unmounts
+    
+  }, []);
   return (
     <motion.div
       inital={{ width: 0 }}
