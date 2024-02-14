@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection";
 import ProjectsSection from "../components/ProjectsSection";
 import ContactBanner from "../components/ContactBanner";
 import { motion } from "framer-motion/dist/framer-motion";
+import React, { useEffect } from 'react';
 
 export default function Home() {
    useEffect(() => {
