@@ -49,8 +49,7 @@ export default function Projects() {
   const [projectData, setProjectData] = useState(ProjectInfo);
 
   useEffect(() => {
-     useEffect(() => {
-    // Set the title when the component mounts
+  
     document.title = "Projects";
 
     
